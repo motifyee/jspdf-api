@@ -1,12 +1,30 @@
 body {
 	background-color: rgb(65, 63, 63);
 	width: 100%;
+	font-family: 'Tajawal', sans-serif;
 }
 #root {
+	/* max-width: 80mm; */
+}
+.overlay {
+	width: 100%;
+	height: 49%;
+	position: absolute;
+	background-color: rebeccapurple;
+}
+#printable {
+	width: 302px;
+	box-sizing: border-box;
+	max-width: 302px;
+	padding: 2em;
+	color: black;
+}
+.container {
+	/* width: 0; */
+	/* height: 0; */
+	overflow: auto;
 	border: 1px solid salmon;
 	color: black;
-	width: 80mm;
-	/* max-width: 80mm; */
 }
 .printing button {
 	display: none;
@@ -28,8 +46,8 @@ tr:nth-child(even) {
 	background-color: #dddddd;
 }
 #root {
-	max-width: 1280px;
-	margin: 0 auto;
+	/* max-width: 1280px; */
+	/* margin: 0 auto; */
 	padding: 2rem;
 	text-align: center;
 }
