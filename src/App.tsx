@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import {
 	canvas2blob,
 	canvas2pdf,
@@ -6,7 +6,7 @@ import {
 	el2pdf,
 	saveCanvasAsImage,
 	send2printer,
-} from './scr';
+} from "./scr";
 
 function App() {
 	async function save() {
@@ -16,12 +16,13 @@ function App() {
 		// console.log(el);
 		// document.getElementById('printable')?.remove();
 
-		const canvas = await el2canvas('printable');
+		const canvas = await el2canvas("printable");
 		// saveCanvasAsImage(canvas);
 		// let blob = await canvas2blob(canvas);
 		// send2printer(blob);
-		canvas2pdf(canvas, true);
+		let pdf = canvas2pdf(canvas, false).output("blob");
 		// el2pdf('printable', true);
+		send2printer(pdf);
 	}
 
 	return (
